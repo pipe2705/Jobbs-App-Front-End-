@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import { Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import JobsContainer from "./containers/JobsContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/jobs" component={JobsContainer} />
+      </Switch>
     </div>
   );
 }
+
+// class App extends Component {
+//   state = {
+//     jobs: [
+//       {
+//         position: "Product Manager",
+//         company: "General Assembly",
+//         salary: 20000
+//       }
+//     ]
+//   };
+
+//   render() {
+//     console.log(this.state.jobs);
+//     return (
+//       <div className="App">
+//         <Jobs jobs={this.state.jobs} />
+//       </div>
+//     );
+//   }
+// }
 
 export default App;
