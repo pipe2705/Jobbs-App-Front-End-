@@ -18,6 +18,9 @@ class Job extends Component {
         <li data-jobs-index={this.props.job._id}>
           <span className="job-item">{this.props.job.city_location}</span>
         </li>
+        <li data-jobs-index={this.props.job._id}>
+          <span className="salary">${this.props.job.salary} </span>
+        </li>
 
         <li>
           <button className="remove" onClick={this.deleteClickedJob}>

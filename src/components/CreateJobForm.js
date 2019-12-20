@@ -4,7 +4,8 @@ class CreateJobForm extends Component {
   state = {
     position: "",
     company: "",
-    city_location: ""
+    city_location: "",
+    salary: null
   };
 
   onInputChange = event => {
@@ -51,6 +52,14 @@ class CreateJobForm extends Component {
             id="newJobCity"
             placeholder="Add a city here "
             value={this.state.city_location}
+          />
+          <input
+            onChange={this.onInputChange}
+            type="number"
+            name="salary"
+            id="newJobSalary"
+            placeholder="Salary in Dollars  "
+            value={this.state.salary}
           />
 
           <button type="submit" id="addJob" className="addJobButton">

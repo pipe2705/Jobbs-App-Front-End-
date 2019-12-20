@@ -7,8 +7,8 @@ const Header = () => {
     <header>
       <h1>The JOBBS App </h1>
       <nav>
-        <Link to={"/"}>Home | </Link>
-        <Link to={"/jobs"}> Job List </Link>
+        <Link to={"/"}> Home 🏠 </Link>
+        <Link to={"/jobs"}> Job List 💼 </Link>
       </nav>
     </header>
   );
