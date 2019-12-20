@@ -8,6 +8,7 @@ class JobModel {
   };
 
   static createJob = job => {
+    debugger;
     return fetch(endPoint, {
       method: "POST",
       headers: {
@@ -17,6 +18,14 @@ class JobModel {
     })
       .then(response => response.json())
       .catch(err => console.log("Could not Post a Job\n", err));
+  };
+
+  static delete = job => {
+    return fetch(`${endPoint}/${job._id}`, {
+      method: "DELETE"
+    })
+      .then(response => response.json())
+      .catch(err => console.log("Could not delete Job \n", err));
   };
 }
 

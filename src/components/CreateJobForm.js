@@ -2,21 +2,23 @@ import React, { Component } from "react";
 
 class CreateJobForm extends Component {
   state = {
-    job: ""
+    position: "",
+    company: ""
   };
 
   onInputChange = event => {
     this.setState({
-      job: event.target.value
+      [event.target.name]: event.target.value
     });
   };
 
   onFormSubmit = event => {
     event.preventDefault();
-    let job = this.state.job;
+    let job = this.state;
     this.props.createJob(job);
     this.setState({
-      job: ""
+      position: "",
+      company: ""
     });
   };
 
@@ -27,9 +29,18 @@ class CreateJobForm extends Component {
           <input
             onChange={this.onInputChange}
             type="text"
-            id="newItemDescription"
-            placeholder="Add a Job here.."
-            value={this.state.job}
+            name="position"
+            id="newJobTitle"
+            placeholder="Add a position here.."
+            value={this.state.position}
+          />
+          <input
+            onChange={this.onInputChange}
+            type="text"
+            name="company"
+            id="newJobCompany"
+            placeholder="Add a company here.."
+            value={this.state.company}
           />
           <button type="submit" id="addJob" className="addJobButton">
             Add Job

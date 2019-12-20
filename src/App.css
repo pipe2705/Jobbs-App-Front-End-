@@ -1,14 +1,125 @@
-.App {
-  text-align: center;
+:root {
+  --grey: rgb(29, 26, 62);
+  --greyish: rgb(38, 29, 52);
+  --color-text-primary: #1f2935;
+  --color-text-primary--on-dark: #ffffff;
+  --color-text-secondary: rgba(51, 54, 58, 0.6);
+  --color-button-background: rgb(119, 112, 193);
+}
+/* 
+#root {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  background: radial-gradient(
+    45.22% 45.22% at 50% 34.94%,
+    var(--greyish) 3.65%,
+    var(--grey) 100%
+  );
+} */
+
+html {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  background: radial-gradient(
+    45.22% 45.22% at 50% 34.94%,
+    var(--greyish) 3.65%,
+    var(--grey) 100%
+  );
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.container {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    45.22% 45.22% at 50% 34.94%,
+    var(--greyish) 2%,
+    var(--grey) 40%
+  );
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
   color: white;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
 }
+
+h1 {
+  font-size: 4em;
+}
+nav {
+  font-size: 2em;
+  text-decoration: none;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decortation: none;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+a:hover {
+  text-decoration: none;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin: 15px;
+}
+#newJobTitle {
+}
+
+button {
+  padding: 1rem 1.5rem;
+  box-shadow: 0px 4px 8px rgba(114, 54, 245, 0.21);
+  background: var(--color-button-background);
+  border-radius: 8px;
+  color: var(--color-text-primary--on-dark);
+  border: none;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 100ms ease-in;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button:hover {
+  background: #7d9df5;
+}
+
+button:active {
+  background: rgb(3, 28, 61);
+}
+
+job-item {
+  font-size: 10em;
+}
+
+/* body {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  background: radial-gradient(
+    45.22% 45.22% at 50% 34.94%,
+    var(--greyish) 3.65%,
+    var(--grey) 100%
+  );
+} */

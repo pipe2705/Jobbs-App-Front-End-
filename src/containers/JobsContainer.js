@@ -22,14 +22,17 @@ class JobsContainer extends Component {
   };
 
   createJob = job => {
-    let newJob = {
-      position: job,
-      company: ""
-    };
-    JobModel.createJob(newJob).then(res => {
-      let jobs = this.state.jobs;
-      jobs.push(res);
-      this.setState({ jobs: jobs });
+    JobModel.createJob(job).then(res => {
+      this.setState({ jobs: res });
+    });
+  };
+
+  deleteJob = job => {
+    JobModel.delete(job).then(res => {
+      let jobs = this.state.jobs.filter(job => {
+        return job._id !== res._id;
+      });
+      this.setState({ jobs });
     });
   };
 
@@ -38,7 +41,7 @@ class JobsContainer extends Component {
       <div className="jobsComponent">
         <CreateJobForm createJob={this.createJob} />
 
-        <Jobs jobs={this.state.jobs} />
+        <Jobs jobs={this.state.jobs} deleteJob={this.deleteJob} />
       </div>
     );
   }

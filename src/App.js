@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import JobsContainer from "./containers/JobsContainer";
+import "./app.css";
 
 function App() {
   return (
