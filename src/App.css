@@ -54,6 +54,7 @@ h1 {
 nav {
   font-size: 2em;
   text-decoration: none;
+  display: flex;
   align-content: center;
   justify-content: center;
   align-items: center;

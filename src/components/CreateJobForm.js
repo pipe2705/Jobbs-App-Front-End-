@@ -3,7 +3,8 @@ import React, { Component } from "react";
 class CreateJobForm extends Component {
   state = {
     position: "",
-    company: ""
+    company: "",
+    city_location: ""
   };
 
   onInputChange = event => {
@@ -18,7 +19,8 @@ class CreateJobForm extends Component {
     this.props.createJob(job);
     this.setState({
       position: "",
-      company: ""
+      company: "",
+      city_location: ""
     });
   };
 
@@ -42,6 +44,15 @@ class CreateJobForm extends Component {
             placeholder="Add a company here.."
             value={this.state.company}
           />
+          <input
+            onChange={this.onInputChange}
+            type="text"
+            name="city_location"
+            id="newJobCity"
+            placeholder="Add a city here "
+            value={this.state.city_location}
+          />
+
           <button type="submit" id="addJob" className="addJobButton">
             Add Job
           </button>
