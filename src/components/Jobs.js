@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import Job from "./Job";
 
-class Jobs extends Component {
-  render() {
-    return this.props.jobs.map(job => {
-      return <Job key={job._id} job={job} />;
-    });
-  }
-}
-export default Jobs;
+const Jobs = props => {
+  let jobs = props.jobs.map(job => {
+    return <Job key={job._id} job={job} deleteJob={props.deleteJob} />;
+  });
 
-//   render() {
-//     return this.props.jobs.map(jobs => <JobItem key={jobs.id} jobs={jobs} />);
-//   }
-// }
+  return <ul>{jobs}</ul>;
+};
+
+export default Jobs;

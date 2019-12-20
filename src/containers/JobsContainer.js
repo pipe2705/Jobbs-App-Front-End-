@@ -29,10 +29,12 @@ class JobsContainer extends Component {
 
   deleteJob = job => {
     JobModel.delete(job).then(res => {
-      let jobs = this.state.jobs.filter(job => {
-        return job._id !== res._id;
-      });
-      this.setState({ jobs });
+      console.log("I LOVE YOU JAMES", res);
+      //   let jobs = this.state.jobs.filter(job => {
+      //     return job._id !== res._id;
+      //   });
+      //   this.setState({ jobs });
+      // });
     });
   };
 

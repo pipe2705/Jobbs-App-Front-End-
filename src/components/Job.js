@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 class Job extends Component {
   deleteClickedJob = () => {
-    // console.log("this.props", this.props);
     this.props.deleteJob(this.props.job);
   };
 

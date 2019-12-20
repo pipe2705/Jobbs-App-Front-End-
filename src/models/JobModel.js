@@ -21,10 +21,10 @@ class JobModel {
   };
 
   static delete = job => {
-    return fetch(`${endPoint}/${job._id}`, {
+    return fetch(`${endPoint}/${job.rowid}`, {
       method: "DELETE"
     })
-      .then(response => response.json())
+      .then(response => response)
       .catch(err => console.log("Could not delete Job \n", err));
   };
 }
