@@ -8,7 +8,7 @@ class JobModel {
   };
 
   static createJob = job => {
-    debugger;
+    // debugger;
     return fetch(endPoint, {
       method: "POST",
       headers: {
@@ -26,6 +26,19 @@ class JobModel {
     })
       .then(response => response)
       .catch(err => console.log("Could not delete Job \n", err));
+  };
+
+  static update = job => {
+    return fetch(`${endPoint}/${job.rowid}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(job)
+    })
+      .then(response => response.json())
+      .catch(err => console.log("Could not update job \n", err));
   };
 }
 

@@ -38,12 +38,26 @@ class JobsContainer extends Component {
     });
   };
 
+  updateJob = job => {
+    const isUpdatedJob = j => {
+      return j.rowid === job.rowid;
+    };
+
+    JobModel.update(job).then(data => {
+      this.setState({ jobs: data });
+    });
+  };
+
   render() {
     return (
       <div className="jobsComponent">
         <CreateJobForm createJob={this.createJob} />
 
-        <Jobs jobs={this.state.jobs} deleteJob={this.deleteJob} />
+        <Jobs
+          jobs={this.state.jobs}
+          deleteJob={this.deleteJob}
+          updateJob={this.updateJob}
+        />
       </div>
     );
   }

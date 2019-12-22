@@ -112,8 +112,15 @@ button:active {
   background: rgb(3, 28, 61);
 }
 button.remove {
+  line-height: 1px;
+  margin-top: 10px;
+  margin-left: 20px;
+  background: #cd7df5;
+}
+.EditButton {
   line-height: 5px;
   margin-top: 10px;
+  margin-right: 20px;
 }
 
 span.job-item {
