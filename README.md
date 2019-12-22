@@ -41,6 +41,15 @@ The link to the Repo of the Back end and API for this Project:
 
 ### 3- Wireframes 
 
+
+> Link to the Figma Wireframes https://www.figma.com/file/06G7OAEGXUs0nmzs9aOHDg/Jobbs-App
+
+![Home Page](https://github.com/pipe2705/Jobbs-App-Front-End-/blob/master/Wireframes/Home%20Page%20.png?raw=true)
+
+![Main Board Page](https://github.com/pipe2705/Jobbs-App-Front-End-/blob/master/Wireframes/Main%20Board%20Page%20.png?raw=true)
+
+![Settings Page](https://github.com/pipe2705/Jobbs-App-Front-End-/blob/master/Wireframes/Profile%20Page%20.png?raw=true)
+
 ### 4- Main Entities
 
 The main Entities at the current state are: 
